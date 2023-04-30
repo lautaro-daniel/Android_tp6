@@ -12,7 +12,7 @@ object MovieRequestGenerator {
         val defaultRequest = chain.request()
         val defaultHttpUrl = defaultRequest.url()
         val httpUrl = defaultHttpUrl.newBuilder()
-            .addQueryParameter(API,"api_key=6d832682735f4138c76d2b1e20bb10e6")
+            .addQueryParameter(API,"api_key=7d3e6a5c45ebf4fea2fa47bb046f8756")
             .build()
         val requestBuilder = defaultRequest.newBuilder().url(httpUrl)
         chain.proceed(requestBuilder.build())
