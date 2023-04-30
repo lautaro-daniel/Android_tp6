@@ -8,6 +8,7 @@ object MovieRequestGenerator {
     private const val API_MOVIES_URL = "https://api.themoviedb.org/"
     private const val API = "apikey"
 
+    //fix
     private val httpClient = OkHttpClient.Builder().addInterceptor { chain ->
         val defaultRequest = chain.request()
         val defaultHttpUrl = defaultRequest.url()
