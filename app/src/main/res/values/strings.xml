@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">PIL-MOBILE-Retrofit-Room</string>
 
-    <string name="movies">Most Popular Movies</string>
+    <string name="movies">My Movies</string>
 
-    <string name="card_id">ID: %1$s</string>
-    <string name="card_is_main">Is main: %1$s</string>
-    <string name="card_license_author">License author: %1$s</string>
+    <string name="card_title">Title: %1$s</string>
+    <string name="card_description">Description: %1$s</string>
+    <string name="card_release">Release: %1$s</string>
     <string name="content_description">contentDescription</string>
 </resources>
