@@ -23,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.pil.movieApp.activity.MovieActivity"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+        </activity>
     </application>
 
 </manifest>

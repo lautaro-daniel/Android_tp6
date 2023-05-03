@@ -1,6 +1,8 @@
 package com.pil.movieApp.activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,6 +29,12 @@ class MovieActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //val intent = Intent(this, MainActivity::class.java)
+        binding.buttonBackHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val dataBase: MovieRoomDataBase by lazy {
             Room
@@ -53,7 +61,10 @@ class MovieActivity : AppCompatActivity() {
         when (data.status) {
             MainViewModel.MainStatus.SHOW_INFO -> {
                 binding.recycler.layoutManager = LinearLayoutManager(this)
-                binding.recycler.adapter = MovieAdapter(data.movies)
+                binding.recycler.adapter = data.movies?.let { MovieAdapter(it) }
+            }
+            MainViewModel.MainStatus.EMPTY_STATE -> {
+                binding.errorDialog.visibility = View.VISIBLE
             }
         }
     }
@@ -61,5 +72,8 @@ class MovieActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         viewModel.callService()
+        binding.buttonGetMovies.visibility = View.GONE
+        binding.appDescription.visibility = View.GONE
+        binding.errorDialog.visibility = View.VISIBLE
     }
 }
