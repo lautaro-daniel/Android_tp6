@@ -24,6 +24,7 @@
         app:layout_constraintBottom_toTopOf="@id/button_get_movies"
         app:layout_constraintTop_toBottomOf="@+id/title"
         android:text="@string/app_description"
+        android:textAlignment="center"
         />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -53,7 +54,7 @@
         />
 
     <TextView
-        android:id="@+id/error_dialog"
+        android:id="@+id/empty_state"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ERROR"
