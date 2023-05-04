@@ -6,7 +6,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.pil.movieApp.adapter.MovieAdapter
 import com.pil.movieApp.database.MovieDataBaseImpl
@@ -30,7 +29,6 @@ class MovieActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //val intent = Intent(this, MainActivity::class.java)
         binding.buttonBackHome.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

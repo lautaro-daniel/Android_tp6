@@ -37,6 +37,5 @@ class MainViewModel(private val model: MainContract.Model) : ViewModel(), MainCo
 
     enum class MainStatus {
         SHOW_INFO,
-        //EMPTY_STATE
     }
 }
