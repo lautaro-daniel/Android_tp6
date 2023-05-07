@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.pil.movieApp.adapter.MovieAdapter
 import com.pil.movieApp.database.MovieDataBaseImpl
@@ -59,14 +60,16 @@ class MovieActivity : AppCompatActivity() {
     private fun updateUI(data: MainViewModel.MainData) {
         when (data.status) {
             MainViewModel.MainStatus.SHOW_INFO -> {
-                if (data.movies!!.isEmpty()){
-                    binding.emptyState.visibility = View.VISIBLE
+                if (data.movies.isEmpty()){
+                    binding.emptyState.visibility = RecyclerView.VISIBLE
                 }else {
                     binding.recycler.layoutManager = LinearLayoutManager(this)
-                    binding.recycler.adapter = data.movies?.let { MovieAdapter(it) }
+                    binding.recycler.adapter = MovieAdapter(data.movies)
                 }
             }
-
+            MainViewModel.MainStatus.ERROR -> {
+                binding.emptyState.visibility = RecyclerView.VISIBLE
+            }
         }
     }
 
