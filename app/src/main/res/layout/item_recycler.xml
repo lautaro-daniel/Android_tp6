@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/container_margin"
-    android:background="@android:color/darker_gray"
+    android:background="@drawable/custom_background"
     android:elevation="@dimen/card_elevation"
-    tools:context="com.pil.movieApp.activity.MainActivity" >
+    tools:context="com.pil.movieApp.activity.MainActivity"
+    >
 
     <TextView
         android:id="@+id/movie_title"

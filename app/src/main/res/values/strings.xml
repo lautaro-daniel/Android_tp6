@@ -8,4 +8,8 @@
     <string name="card_release">Release: %1$s</string>
     <string name="content_description">contentDescription</string>
     <string name="app_description">This is a description example about the app</string>
+    <string name="error_dialog_title">ERROR</string>
+    <string name="message_error_dialog">This is a description example about the app</string>
+    <string name="error_dialog_button">BACK</string>
+    <string name="get_dialog_button">Get Error</string>
 </resources>

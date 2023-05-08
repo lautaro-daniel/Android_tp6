@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="@dimen/container_margin"
     tools:context="com.pil.movieApp.activity.MainActivity"
+    android:background="@drawable/custom_background"
     >
 
     <TextView
@@ -15,7 +16,8 @@
         android:layout_height="wrap_content"
         android:text="@string/movies"
         app:layout_constraintBottom_toTopOf="@id/recycler"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/app_description"
@@ -35,23 +37,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
-    <!--<Button
-        android:id="@+id/button_get_movies"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="10dp"
-        android:text="GET MOVIES"
-        />-->
-
-    <!--<Button
-        android:id="@+id/button_back_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="10dp"
-        android:text="BACK"
-        />-->
 
     <TextView
         android:id="@+id/empty_state"
@@ -64,16 +49,6 @@
         android:textAlignment="center"
         />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/button_back_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/home"
-    />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/button_get_movies"
@@ -83,7 +58,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/local_movies"
+        android:src="@drawable/movie"
+        android:backgroundTint="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineProvider="none"
+        />
+
+    <Button
+        android:id="@+id/error_dialog_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/get_dialog_button"
+        android:backgroundTint="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineProvider="none"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_back_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/arrow_back"
+        android:backgroundTint="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineProvider="none"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

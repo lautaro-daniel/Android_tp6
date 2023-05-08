@@ -18,6 +18,7 @@ import com.pil.movieApp.mvvm.viewmodel.factory.ViewModelFactory
 import com.pil.movieApp.service.MovieClient
 import com.pil.movieApp.service.MovieRequestGenerator
 import com.pil.movieApp.service.MovieServiceImpl
+import com.pil.movieApp.util.ErrorDialog
 import com.pil.retrofit_room.databinding.ActivityMainBinding
 
 class MovieActivity : AppCompatActivity() {
@@ -68,7 +69,7 @@ class MovieActivity : AppCompatActivity() {
                 }
             }
             MainViewModel.MainStatus.ERROR -> {
-                binding.emptyState.visibility = RecyclerView.VISIBLE
+                ErrorDialog.showErrorDialog(this)
             }
         }
     }
@@ -77,5 +78,7 @@ class MovieActivity : AppCompatActivity() {
         super.onResume()
         viewModel.callService()
         binding.appDescription.visibility = View.GONE
+        binding.buttonGetMovies.visibility = View.GONE
+        binding.errorDialogButton.visibility = View.GONE
     }
 }

@@ -2,7 +2,9 @@ package com.pil.movieApp.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.pil.movieApp.util.ErrorDialog
 import com.pil.retrofit_room.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
@@ -14,11 +16,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.buttonBackHome.visibility = View.GONE
 
         binding.buttonGetMovies.setOnClickListener {
             val intent = Intent(this, MovieActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        binding.errorDialogButton.setOnClickListener {
+            ErrorDialog.showErrorDialog(this)
         }
     }
 }
