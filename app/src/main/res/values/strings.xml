@@ -7,9 +7,11 @@
     <string name="card_description">Description: %1$s</string>
     <string name="card_release">Release: %1$s</string>
     <string name="content_description">contentDescription</string>
-    <string name="app_description">This is a description example about the app</string>
+    <string name="app_description">Do you want to keep up to date with the best movies?
+    Then don´t hesitate to enter in the icon movie now! </string>
     <string name="error_dialog_title">ERROR</string>
-    <string name="message_error_dialog">This is a description example about the app</string>
+    <string name="message_error_dialog">It happened a problem. Please try again later</string>
     <string name="error_dialog_button">BACK</string>
     <string name="get_dialog_button">Get Error</string>
+    <string name="text_empty_state">ERROR</string>
 </resources>

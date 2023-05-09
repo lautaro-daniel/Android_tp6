@@ -10,6 +10,7 @@ object ErrorDialog {
         val errorBuilder = AlertDialog.Builder(activity)
         errorBuilder.setTitle(R.string.error_dialog_title)
         errorBuilder.setTitle(R.string.message_error_dialog)
+        errorBuilder.setIcon(R.drawable.error)
 
         errorBuilder.setNeutralButton(R.string.error_dialog_button){ _, _ ->}
         errorBuilder.show()

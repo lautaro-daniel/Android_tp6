@@ -17,6 +17,7 @@
         android:text="@string/movies"
         app:layout_constraintBottom_toTopOf="@id/recycler"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
         />
 
     <TextView
@@ -27,6 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         android:text="@string/app_description"
         android:textAlignment="center"
+        android:textSize="@dimen/description_size"
         />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -42,7 +44,7 @@
         android:id="@+id/empty_state"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ERROR"
+        android:text="@string/text_empty_state"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:visibility="gone"
@@ -56,12 +58,12 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_margin="16dp"
         android:src="@drawable/movie"
         android:backgroundTint="@android:color/transparent"
         android:outlineSpotShadowColor="@android:color/transparent"
         android:outlineProvider="none"
+        app:borderWidth="0dp"
         />
 
     <Button
@@ -70,8 +72,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="@dimen/margin_end_button_error_dialog"
+        android:layout_marginBottom="@dimen/margin_bottom_button_error_dialog"
         android:text="@string/get_dialog_button"
         android:backgroundTint="@android:color/transparent"
         android:outlineSpotShadowColor="@android:color/transparent"
@@ -88,6 +90,7 @@
         android:backgroundTint="@android:color/transparent"
         android:outlineSpotShadowColor="@android:color/transparent"
         android:outlineProvider="none"
+        app:borderWidth="0dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

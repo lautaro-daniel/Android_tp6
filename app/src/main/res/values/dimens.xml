@@ -4,4 +4,7 @@
     <dimen name="container_margin">15dp</dimen>
     <dimen name="card_elevation">5dp</dimen>
     <dimen name="image_size">100dp</dimen>
+    <dimen name="description_size">20dp</dimen>
+    <dimen name="margin_end_button_error_dialog">90dp</dimen>
+    <dimen name="margin_bottom_button_error_dialog">20dp</dimen>
 </resources>
