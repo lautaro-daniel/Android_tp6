@@ -3,6 +3,7 @@ package com.pil.movieApp.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,7 +19,7 @@ import com.pil.movieApp.mvvm.viewmodel.factory.ViewModelFactory
 import com.pil.movieApp.service.MovieClient
 import com.pil.movieApp.service.MovieRequestGenerator
 import com.pil.movieApp.service.MovieServiceImpl
-import com.pil.movieApp.util.ErrorDialog
+import com.pil.movieApp.util.ErrorDialogAlert
 import com.pil.retrofit_room.databinding.ActivityMainBinding
 
 class MovieActivity : AppCompatActivity() {
@@ -69,7 +70,7 @@ class MovieActivity : AppCompatActivity() {
                 }
             }
             MainViewModel.MainStatus.ERROR -> {
-                ErrorDialog.showErrorDialog(this)
+                ErrorDialogAlert.showErrorDialog(this)
             }
         }
     }
